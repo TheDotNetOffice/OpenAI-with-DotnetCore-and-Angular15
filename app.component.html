@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<div class="text-center">
+
+  <div class="panel-default">
+    <div class="panel-body">ChatGPT Completions In the ASP.NET Core Web API</div>
+    <div class="panel-body">
+      <div class="col-sm-8">
+        <input type="text" [(ngModel)]="searchTxtVal" class="form-control" autocomplete="off"
+          placeholder="Enter your question" />
+      </div>
+      <div class="col-sm-2" style="margin-left: -60px;">
+        <button (click)="getResult()">Get Result</button>
+      </div>
+
+
+      <div class="col-sm-12 mt-5" *ngIf="showOutput">
+        {{output}}
+      </div>
+      <div class="col-sm-12 mt-5" *ngIf="isLoading">
+       <p style="color: red;">Loading...</p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
